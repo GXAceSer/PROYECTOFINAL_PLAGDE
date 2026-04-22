@@ -33,20 +33,19 @@ Facilitar la creación de documentos oficiales cumpliendo con normas del sector 
 ## Instalación 
  
 1. Clonar el repositorio.
-   ```bash
-  git clone <URL_DEL_REPOSITORIO>
+   ```bash git clone <URL_DEL_REPOSITORIO>
   
 3. Acceder al proyecto.
-   cd PROYECTOFINAL_PLAGDE
+    ```bash cd PROYECTOFINAL_PLAGDE
    
 5. Variables de entorno.
 Este proyecto utiliza un archivo ".env" para la configuración
    1. Crear el archivo .env en la raíz del proyecto (puedes basarte en .env.example)
-     cp .env.example .env
+      ```bash cp .env.example .env
    2. Editar el archivo .env con tus credenciales
 
 6. Ejecutar el proyecto.
-   docker-compose up --build
+    ```bash docker-compose up --build
    
 ## Rol en el proyecto
 - Desarrollo backend con Flask.
@@ -54,7 +53,7 @@ Este proyecto utiliza un archivo ".env" para la configuración
 - Implementación de contenedores con Docker.
 - Creación de plantillas de documentos en HTML.
   
-Alumnos: 
+## Alumnos: 
 - Acevedo Serrano Graciela Ximena.
 - Cicilia Mendoza Daniel.
 - Díaz de León Flores Jesús Alejandro.
