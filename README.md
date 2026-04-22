@@ -33,7 +33,6 @@ Facilitar la creación de documentos oficiales cumpliendo con normas del sector 
 ## ⚙️ Instalación
 
 1. Clonar el repositorio:
-```bash
 git clone <URL_DEL_REPOSITORIO>
   
 2. Acceder al proyecto.
