@@ -29,9 +29,11 @@ Facilitar la creación de documentos oficiales cumpliendo con normas del sector 
 -Nginx
 -Docker Compose
 
+---
 
 ## Instalación
 
+```md
 1. Clonar el repositorio:
    
 ```bash
