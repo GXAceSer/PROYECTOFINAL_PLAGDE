@@ -32,7 +32,6 @@ Facilitar la creación de documentos oficiales cumpliendo con normas del sector 
 
 ## Instalación
 
-```md
 1. Clonar el repositorio:
    
 ```bash
