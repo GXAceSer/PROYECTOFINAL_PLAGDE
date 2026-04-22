@@ -49,7 +49,6 @@ Este proyecto utiliza un archivo ".env" para la configuración
    3. Editar el archivo .env con tus credenciales
 
 6. Ejecutar el proyecto.
-    ```md
     ```bash
     docker-compose up --build
    
