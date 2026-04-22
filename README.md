@@ -38,8 +38,7 @@ Facilitar la creación de documentos oficiales cumpliendo con normas del sector 
    
 ```bash
 git clone <URL_DEL_REPOSITORIO>
-
----
+```
 
 2. Acceder al proyecto.
 cd PROYECTOFINAL_PLAGDE
