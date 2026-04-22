@@ -37,18 +37,15 @@ Facilitar la creación de documentos oficiales cumpliendo con normas del sector 
 git clone <URL_DEL_REPOSITORIO>
   
 2. Acceder al proyecto.
-```bash
 cd PROYECTOFINAL_PLAGDE
    
 3. Variables de entorno.
 Este proyecto utiliza un archivo ".env" para la configuración
 1. Crear el archivo .env en la raíz del proyecto (puedes basarte en .env.example)
-```bash
 cp .env.example .env
 2. Editar el archivo .env con tus credenciales
 
 3. Ejecutar el proyecto.
-```bash
 docker-compose up --build
    
 ## Rol en el proyecto
