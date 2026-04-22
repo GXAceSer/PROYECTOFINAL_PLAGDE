@@ -30,15 +30,18 @@ Facilitar la creación de documentos oficiales cumpliendo con normas del sector 
 -Docker Compose
 
 
-## ⚙️ Instalación
+## Instalación
 
+```md
 1. Clonar el repositorio:
+   
+```bash
 git clone <URL_DEL_REPOSITORIO>
-  
+
 2. Acceder al proyecto.
 cd PROYECTOFINAL_PLAGDE
    
-3. Variables de entorno.
+4. Variables de entorno.
 Este proyecto utiliza un archivo ".env" para la configuración
 1. Crear el archivo .env en la raíz del proyecto (puedes basarte en .env.example)
 cp .env.example .env
