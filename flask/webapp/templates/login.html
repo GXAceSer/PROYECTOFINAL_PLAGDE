@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-image: url('https://i.imgur.com/OFPCY1B.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #2c3e50;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.85); /* Blanco con transparencia */
+            color: #2c3e50; /* Cambiamos el color del texto para que sea legible */
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            backdrop-filter: blur(5px); /* Efecto de desenfoque para el fondo */
+        }
+        .logo-izquierdo {
+            max-height: 110px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .logo-izquierdo:hover {
+            transform: scale(1.05);
+        }
+        .logo-derecho {
+            max-height: 60px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .logo-derecho:hover {
+            transform: scale(1.05);
+        }
+        .titulo-escuela {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 26px;
+            text-align: center;
+            width: 100%;
+            color: #2c3e50; /* Color legible sobre fondo blanco */
+            font-weight: 600;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 20px;
+        }
+        .login-box {
+            background: rgba(255, 255, 255, 0.95); /* Blanco con ligera transparencia */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 400px;
+            backdrop-filter: blur(5px); /* Efecto de desenfoque para el cuadro */
+        }
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+            transition: border-color 0.3s ease;
+        }
+        input:focus {
+            border-color: #1e3d59;
+            outline: none;
+        }
+        button {
+            margin-top: 25px;
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(90deg, #1e3d59 0%, #2a5470 100%);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            background: linear-gradient(90deg, #163045 0%, #1e3d59 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+        }
+        .error {
+            color: #e74c3c;
+            background-color: #fceae9;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+        footer {
+            background-color: rgba(222, 220, 230, 0.26); /* Blanco con transparencia */
+            color: #020202; /* Color legible */
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            backdrop-filter: blur(5px); /* Efecto de desenfoque */
+        }
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        footer img {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            height: 40px;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        footer img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px;
+            }
+            .logo-izquierdo, .logo-derecho {
+                max-height: 80px;
+                margin: 10px 0;
+            }
+            .titulo-escuela {
+                position: static;
+                transform: none;
+                font-size: 20px;
+                margin: 10px 0;
+            }
+            .login-box {
+                padding: 20px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            input, button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://escuelasecundariatecnica29.wordpress.com/wp-content/uploads/2012/08/logo-est-jpg-azul-27.gif" alt="Logo Escuela Técnica 46" class="logo-izquierdo">
+        <h1 class="titulo-escuela">Escuela Secundaria Técnica No. 46 "Ing. Estanislao Ramírez Ruiz"</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/SEP_Logo_2019.svg/2560px-SEP_Logo_2019.svg.png" alt="Logo SEP" class="logo-derecho">
+    </header>
+
+    <main>
+        <div class="login-box">
+            <h2>Iniciar Sesión</h2>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <p class="error">{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <form method="POST">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="contraseña" placeholder="Contraseña" required>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>Avenida Sonido 13, Col. Santa Cecilia, Tláhuac, CDMX, C.P. 13010</p>
+        <p>Tel: 55 5842 5960 | Correo: E09DST0046@sepdf.gob.mx</p>
+        <img src="https://i.imgur.com/bwA8hgI.png" alt="Logo PLAGDE">
+    </footer>
+</body>
+</html>

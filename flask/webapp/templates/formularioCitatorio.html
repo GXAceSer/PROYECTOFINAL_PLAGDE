@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Citatorio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            color: #2c3e50;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://i.imgur.com/OFPCY1B.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: -1;
+            opacity: 0.7;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.85);
+            color: #2c3e50;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            backdrop-filter: blur(5px);
+        }
+        .logo-izquierdo {
+            max-height: 110px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .logo-izquierdo:hover {
+            transform: scale(1.05);
+        }
+        .logo-derecho {
+            max-height: 60px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .logo-derecho:hover {
+            transform: scale(1.05);
+        }
+        .titulo-escuela {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 26px;
+            text-align: center;
+            width: 100%;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 20px;
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #020202;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(5px);
+            width: 100%;
+        }
+        .instructions {
+            color: #1e3d59;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #1e3d59;
+            outline: none;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Espacio entre botones */
+            margin-top: 25px;
+        }
+        button {
+            padding: 14px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #1e3d59 0%, #2a5470 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            background: linear-gradient(90deg, #163045 0%, #1e3d59 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+        }
+        .return-button {
+            padding: 14px 15px; /* Mitad del ancho */
+            font-size: 14px;
+        }
+        p {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #555;
+        }
+        strong {
+            color: #1e3d59;
+        }
+        footer {
+            background-color: rgba(203, 198, 221, 0.26);
+            color: #000000;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            backdrop-filter: blur(5px);
+        }
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        footer img {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            height: 40px;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        footer img:hover {
+            transform: scale(1.1);
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px;
+            }
+            .logo-izquierdo, .logo-derecho {
+                max-height: 80px;
+                margin: 10px 0;
+            }
+            .titulo-escuela {
+                position: static;
+                transform: none;
+                font-size: 20px;
+                margin: 10px 0;
+            }
+            main {
+                padding: 20px 10px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+            .form-container {
+                padding: 15px;
+            }
+            button {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+            .return-button {
+                padding: 12px 10px; /* Ajuste para móvil */
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const profesorSelect = document.getElementById('id_profesor');
+            const nombreProfesorDisplay = document.getElementById('nombreProfesorDisplay');
+            const materiaProfesorDisplay = document.getElementById('materiaProfesorDisplay');
+
+            profesorSelect.addEventListener('change', function () {
+                const selectedOption = this.options[this.selectedIndex];
+                if (selectedOption && selectedOption.value) {
+                    nombreProfesorDisplay.textContent = selectedOption.dataset.nombrep;
+                    materiaProfesorDisplay.textContent = selectedOption.dataset.materia;
+                } else {
+                    nombreProfesorDisplay.textContent = '';
+                    materiaProfesorDisplay.textContent = '';
+                }
+            });
+
+            if (profesorSelect.value) {
+                const event = new Event('change');
+                profesorSelect.dispatchEvent(event);
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <img src="https://escuelasecundariatecnica29.wordpress.com/wp-content/uploads/2012/08/logo-est-jpg-azul-27.gif" alt="Logo Escuela Técnica 46" class="logo-izquierdo">
+        <h1 class="titulo-escuela">Escuela Secundaria Técnica No. 46 "Ing. Estanislao Ramírez Ruiz"</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/SEP_Logo_2019.svg/2560px-SEP_Logo_2019.svg.png" alt="Logo SEP" class="logo-derecho">
+    </header>
+
+    <main>
+        <h2>Generar Nuevo Citatorio</h2>
+        <div class="form-container">
+            <div class="instructions">Ingrese los datos requeridos:</div>
+            <form action="/generador/citatorio" method="POST">
+                <label for="matricula">Matrícula:</label>
+                <input type="text" id="matricula" name="matricula" required>
+                <label for="fecha_R">Fecha realización:</label>
+                <input type="date" id="fecha_R" name="fecha_R" required>
+                <label for="fecha_Cita">Fecha cita:</label>
+                <input type="date" id="fecha_Cita" name="fecha_Cita" required>
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+                <label for="motivo">Motivo:</label>
+                <select name="motivo" id="motivo">
+                    <option value="Conducta">Conducta</option>
+                    <option value="Rendimiento escolar">Rendimiento escolar</option>
+                    <option value="Motivos personales">Motivos personales</option>
+                </select>
+                <label for="id_profesor">Emitido Por (Profesor):</label>
+                <select id="id_profesor" name="id_profesor" required>
+                    <option value="">-- Selecciona un Profesor --</option>
+                    {% for profesor in lista_prof %}
+                        <option value="{{ profesor.id }}" data-nombrep="{{ profesor.nombreP }}" data-materia="{{ profesor.materia }}">
+                            {{ profesor.nombreP }} - {{ profesor.materia }}
+                        </option>
+                    {% endfor %}
+                </select>
+                <p><strong>Nombre del profesor:</strong> <span id="nombreProfesorDisplay"></span></p>
+                <p><strong>Materia:</strong> <span id="materiaProfesorDisplay"></span></p>
+                <div class="button-container">
+                    <button type="submit">Generar PDF</button>
+                   
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>Avenida Sonido 13, Col. Santa Cecilia, Tláhuac, CDMX, C.P. 13010</p>
+        <p>Tel: 55 5842 5960 | Correo: E09DST0046@sepdf.gob.mx</p>
+        <img src="https://i.imgur.com/bwA8hgI.png" alt="Logo PLAGDE">
+    </footer>
+</body>
+</html>

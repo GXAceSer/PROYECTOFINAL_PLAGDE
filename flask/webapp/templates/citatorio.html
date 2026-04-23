@@ -1,0 +1,111 @@
+<!DOCTYPE html> <!--Declaracion tipo de documento --->
+<html lang="es"><!--Contenido en español --->
+<head> <!--Cabecera del documento --->
+    <meta charset="UTF-8"> <!--Codificación de caracteres --->
+    <title>Citatorio</title> <!--Titulo de la pagina --->
+    <!--INICIA CSS CON LOS ESTILOS-->
+    <style> 
+        /*fecha realizacion*/
+        .fechaReg{
+            text-align: right; /*Alineacion del texto a la derecha*/
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            font-size: 15px; /*Tamaño letra*/
+            color: #000000; /*Color del texto*/
+            margin-top: 20px; /*Tamaño del margen desde arriba*/
+           
+        }
+
+        /*Sub encabezado que dice ASUNTO*/
+        .subEnc_1{
+            text-align: right; /*Alineacion del texto a la derecha*/
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            font-size: 15px; /*Tamaño letra*/
+            color: #000000; /*Color del texto*/
+            margin-top: 60px; /*Tamaño del margen desde arriba*/
+            padding-right: 30px; /*Espaciado interno derecho*/
+
+        }
+
+        /*Encabezado nombre tutor*/
+        .subEnc_2{
+            text-align: left; /*Alineacion del texto a la derecha*/
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            font-size: 15px; /*Tamaño letra*/
+            color: #000000; /*Color del texto*/
+            margin-top: 40px; /*Tamaño del margen desde arriba*/
+
+        }
+
+        .cit_P1 { /*Primer parrafo constancia*/
+            text-align:justify;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            font-size: 15px; /*Tamaño letra*/
+            color: #000000; /*Color del texto*/
+            margin-top: 60px; /*Color del margen*/           
+        }
+     
+        
+        .profesor { /*Firma*/
+            text-align: left; /*Alineacion del texto a la derecha*/
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            font-size: 15px; /*Tamaño letra*/
+            color: #000000; /*Color del texto*/
+            margin-top: 70px; /*Tamaño del margen desde arriba*/
+        }
+
+        .selloSec {
+            position: absolute;
+            top: 25px;
+            left: 15px;
+            width: 80px;
+            height: 80px;
+        }
+        .selloSep {
+            position: absolute;
+            top: 25px;
+            left: 115px;
+            width: 80px;
+            height: 80px;
+        }
+       
+    </style>
+
+</head>
+<!--CUERPO DOCUMENTO-->
+<body>
+    <!--CLASE ENCABEZADO-->
+    <div class="fechaReg">
+        <p>Tláhuac, CDMX a {{fechaReg}}</p>
+    </div>
+    <!--CLASE subEncabezado 1-->
+    <div class="subEnc_1">
+        <p>ASUNTO: CITATORIO.</p>
+    </div> 
+    <!--CLASE SubEncabezado-->
+    <div class="subEnc_2">
+        <p>Sr (a): {{nombreT}} {{apellido_PT}} {{apellido_MT}}</p>
+    </div> 
+    <!--citatorio parrafo-->
+    <div class="cit_P1">
+        <p>Por medio del presente se solicita su presencia en la escuela el día {{fecha_Cit}} a las {{hora}}, 
+            con el propósito de atender situaciones que se han presentado con el alumno (a): {{alumno}} 
+            {{apellido_P}} {{apellido_M}} en específicamente por motivos de: {{motivo_citatorio}}.
+        </p>
+    
+        <p>Es muy importante su presencia.</p>
+    </div>
+                         
+    </div>
+    
+    <!--Profesor que envia -->
+    <div class="profesor">
+        <p>Cita realizada por el (la) docente: {{profesor}} profesor (a) de la asignatura de {{materia}}</p>
+    </div>
+
+     <!--IMAGEN SELLO SEC-->
+    <img class="selloSec" src="https://escuelasecundariatecnica29.wordpress.com/wp-content/uploads/2012/08/logo-est-jpg-azul-27.gif" alt="selloSec">
+     <!--IMAGEN SELLO SEC-->
+    <img class="selloSep" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYULFMfROumghTm9I_FKskeMYkWjhMWr6kx4XkaaWB74Dq7ONu42oVL1hAFOvALlwarWzJWuqyRS4Nyg7cEuta9QypH3rnu70HgUKK0z8ltLt_ZBgetS1nxHeCs06yUg85pQ8LCEgPcIs/s1600/SELLO.png" alt="selloSep">
+    
+</body>
+</html>

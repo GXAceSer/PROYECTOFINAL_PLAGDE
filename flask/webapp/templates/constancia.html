@@ -1,0 +1,158 @@
+<!DOCTYPE html> <!--Declaracion tipo de documento --->
+<html lang="es"><!--Contenido en español --->
+<head> <!--Cabecera del documento --->
+    <meta charset="UTF-8"> <!--Codificación de caracteres --->
+    <title>Constancia</title> <!--Titulo de la pagina --->
+    <!--INICIA CSS CON LOS ESTILOS-->
+    <style> 
+        /*Encabezado con el logo de la SEP*/
+        .encabezado{
+            text-align: right; /*Alineacion del texto a la derecha*/
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 10px; /*Tamaño letra*/
+            color: #000000; /*Color del texto*/
+            margin-top: 20px; /*Tamaño del margen desde arriba*/
+           
+        }
+
+        /*Sub encabezado que dice ASUNTO*/
+        .subEnc_1{
+            text-align: right; /*Alineacion del texto a la derecha*/
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            font-size: 15px; /*Tamaño letra*/
+            color: #000000; /*Color del texto*/
+            margin-top: 60px; /*Tamaño del margen desde arriba*/
+            padding-right: 30px; /*Espaciado interno derecho*/
+
+        }
+
+        /*Encabezado que dice A quien corresponda*/
+        .subEnc_2{
+            text-align: left; /*Alineacion del texto a la derecha*/
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            font-size: 15px; /*Tamaño letra*/
+            color: #000000; /*Color del texto*/
+            margin-top: 80px; /*Tamaño del margen desde arriba*/
+
+        }
+
+        .const_P1 { /*Primer parrafo constancia*/
+            text-align:justify;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            font-size: 15px; /*Tamaño letra*/
+            color: #000000; /*Color del texto*/
+            margin-top: 90px; /*Color del margen*/           
+        }
+
+        .const_P2 { /*Segundo parrafo constancia*/
+            text-align:justify;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            font-size: 15px; /*Tamaño letra*/
+            color: #000000; /*Color del texto*/
+            margin-top: 90px; /*Color del margen*/           
+        }
+       
+
+        .atte { /*Ultimo parrafo*/
+            text-align: left; /*Alineacion del texto a la derecha*/
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            font-size: 15px; /*Tamaño letra*/
+            color: #000000; /*Color del texto*/
+            margin-top: 80px; /*Tamaño del margen desde arriba*/           
+        }
+
+        .firma { /*Firma*/
+            text-align: left; /*Alineacion del texto a la derecha*/
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            font-size: 15px; /*Tamaño letra*/
+            color: #000000; /*Color del texto*/
+            margin-top: 115px; /*Tamaño del margen desde arriba*/
+        }
+
+        .firmaImg {
+            position: absolute;
+            top: 750px;
+            left: 10px;
+            width: 200px;
+            height: 100px;
+        }
+
+        .logoSEP {
+            position: absolute;
+            top:30px;
+            left: 10px;
+            width: 250px;
+            height: 80px;
+        }
+
+        .selloSEP {
+            position: absolute;
+            top: 710px;
+            left: 300px;
+            width: 100px;
+            height: 100px;
+        }
+       .selloSec {
+            position: absolute;
+            top: 820px;
+            left: 300px;
+            width: 100px;
+            height: 100px;
+        }
+       
+    </style>
+
+</head>
+<!--CUERPO DOCUMENTO-->
+<body>
+    <!--CLASE ENCABEZADO-->
+    <div class="encabezado">
+        <p>Administración Federal de Servicios Educativos en la Ciudad de México</p>
+        <p>Dirección General de Servicios Educativos Tláhuac</p>
+        <p>Dirección Regional de Servicios Educativos Santa Cecilia</p>
+        <p>Supervisión de Zona Escolar No.20 de Educacion Secundaria</p>
+        <p>Escuela Secundaria Técnica No. 46 "Ing. Estanislao Ramírez Ruíz" T.M</p>
+    </div>
+    <!--Imagen sep-->    
+    <img class="logoSEP" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/SEP_Logo_2019.svg/2560px-SEP_Logo_2019.svg.png" alt="Firma">
+    <!--CLASE subEncabezado 1-->
+    <div class="subEnc_1">
+        <p>ASUNTO: CONSTANCIA DE ESTUDIOS.</p>
+    </div> 
+    <!--CLASE SubEncabezado-->
+    <div class="subEnc_2">
+        <p>A QUIEN CORRESPONDA:</p>
+    </div> 
+    <!--Primer parrafo constancia-->
+    <div class="const_P1">
+        <p>La que suscribe Directora de la Técnica No. 46 "Ing. Estanislao Ramírez Ruíz",</p>
+        <p>turno matutino, hace constar que el alumno(a): {{ nombre }} {{ apellido_P }} {{ apellido_M }}, de</p>
+        <p>grupo {{ grado }} {{ grupo }} , está inscrito (a) en este plantel en el ciclo escolar {{ciclo}}.</p>
+    </div>
+    <!--Segundo parrafo constancia-->
+    <div class="const_P2">
+        <p>A petición del interesado (a) y para los fines legales que le convengan se extiende </p>
+        <p>la presente constancia en la Ciudad de México, CDMX a los trece dias del mes y </p>
+        <p>año presente.</p>
+                      
+    </div>
+    <!--CLASE ATENTAMENTE-->
+    <div class="atte">
+        <p>ATENTAMENTE </p>
+    </div>
+    <!--IMAGEN FIRMA-->
+     <img class="firmaImg" src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Firmas_cover.png" alt="Firma">
+    
+     <!--IMAGEN SELLO SEP-->
+     <img class="selloSEP" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYULFMfROumghTm9I_FKskeMYkWjhMWr6kx4XkaaWB74Dq7ONu42oVL1hAFOvALlwarWzJWuqyRS4Nyg7cEuta9QypH3rnu70HgUKK0z8ltLt_ZBgetS1nxHeCs06yUg85pQ8LCEgPcIs/s1600/SELLO.png" alt="Firma">
+       
+     <!--IMAGEN SELLO SEC-->
+     <img class="selloSec" src="https://escuelasecundariatecnica29.wordpress.com/wp-content/uploads/2012/08/logo-est-jpg-azul-27.gif" alt="Firma">
+     
+     <!--FIRMA-->
+    <div class="firma">
+        <p>PROFRA. MARTHA SÁNCHEZ LÓPEZ</p>
+        <p>DIRECTORA DEL PLANTEL</p>
+    </div>
+</body>
+</html>

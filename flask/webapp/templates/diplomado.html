@@ -1,0 +1,164 @@
+<!DOCTYPE html> <!--Declaracion tipo de documento --->
+<html lang="es"><!--Contenido en español --->
+<head> <!--Cabecera del documento --->
+    <meta charset="UTF-8"> <!--Codificación de caracteres --->
+    <title>Diploma</title> <!--Titulo de la pagina --->
+    <!--INICIA CSS CON LOS ESTILOS-->
+    <style> 
+        /*Encabezado con el logo de la SEP*/
+        .encabezado{
+            text-align: center; /*Alineacion del texto a la derecha*/
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            font-size: 20px; /*Tamaño letra*/
+            color: #000000; /*Color del texto*/
+            margin-top: 40px; /*Tamaño del margen desde arriba*/
+           
+        }
+
+        /*FELICITACION*/
+        .titulo{
+            text-align: CENTER; /*Alineacion del texto a la derecha*/
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            font-size: 50px; /*Tamaño letra*/
+            color: #000000; /*Color del texto*/
+            margin-top: 40px; /*Tamaño del margen desde arriba*/
+            font-weight: bold; /*Negrillas*/
+        }
+
+        /*Fecha*/
+        .fecha{
+            text-align: right; /*Alineacion del texto a la derecha*/
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            font-size: 13px; /*Tamaño letra*/
+            color: #000000; /*Color del texto*/
+            margin-top: 40px; /*Tamaño del margen desde arriba*/
+
+        }
+
+        /*Datos izquierda*/
+        .datosIzq { 
+            text-align: left; /*Alineacion del texto a la derecha*/
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            font-size: 15px; /*Tamaño letra*/
+            color: #000000; /*Color del texto*/
+            margin-top: 30px; /*Tamaño del margen desde arriba*/
+        }
+
+        /*Datos izquierda*/
+        .datosIzq { 
+            text-align: left; /*Alineacion del texto a la derecha*/
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            font-size: 15px; /*Tamaño letra*/
+            color: #000000; /*Color del texto*/
+            margin-top: 30px; /*Tamaño del margen desde arriba*/
+        }
+
+       
+
+        .descripcion { /*Ultimo parrafo*/
+            text-align:justify; /*Alineacion del texto a la derecha*/
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            font-size: 15px; /*Tamaño letra*/
+            color: #000000; /*Color del texto*/
+            margin-top: 40px; /*Tamaño del margen desde arriba*/           
+        }
+
+        /*atte*/
+        .atte { 
+            text-align:center; /*Alineacion del texto a la derecha*/
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            font-size: 15px; /*Tamaño letra*/
+            color: #000000; /*Color del texto*/
+            margin-top: 70px; /*Tamaño del margen desde arriba*/
+        }
+        .firma { /*Firma*/
+            text-align: center; /*Alineacion del texto a la derecha*/
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            font-size: 15px; /*Tamaño letra*/
+            color: #000000; /*Color del texto*/
+            margin-top: 115px; /*Tamaño del margen desde arriba*/
+        }
+
+        .firmaImg {
+            position: absolute;
+            top: 725px;
+            left: 225px;
+            width: 220px;
+            height: 120px;
+        }
+
+        .selloSEP {
+            position: absolute;
+            top: 760px;
+            left: 65px;
+            width: 100px;
+            height: 100px;
+        }
+       .selloSec {
+            position: absolute; /* Permite posicionarlo con top/left */
+            top: 50%; /* Centra verticalmente */
+            left: 50%; /* Centra horizontalmente */
+            transform: translate(-50%, -50%); /* Ajusta para el centro exacto del elemento */
+            width: 600px; 
+            height: 600px; 
+            opacity: 0.10; /* tansparencia */
+            z-index: -1; /* Lo envía detrás de todo el contenido */
+        }
+       
+    </style>
+
+</head>
+<!--CUERPO DOCUMENTO-->
+<body>
+
+    <!--IMAGEN SELLO SEC--->
+    <img class="selloSec" src="https://escuelasecundariatecnica29.wordpress.com/wp-content/uploads/2012/08/logo-est-jpg-azul-27.gif" alt="Firma">
+
+    <!--CLASE ENCABEZADO-->
+    <div class="encabezado">
+        <p>ESCUELA SECUNDARIA TÉCNICA NO.46</p>
+        <p>"ING. ESTANISLAO RAMÍREZ RUÍZ"</p>
+        <p>TURNO MATUTINO</p>
+    </div>
+    
+    <!--CLASE subEncabezado 1-->
+    <div class="titulo">
+        <p>F E L I C I T A C I Ó N </p>
+    </div> 
+    <!--CLASE SubEncabezado-->
+    <div class="fecha">
+        <p>TLÁHUAC, CDMX A {{fecha_Reg}}</p>
+    </div> 
+    <!--Datos Izquieda-->
+    <div class="datosIzq">
+        <p>ALUMNO (A) : {{ nombre }} {{ apellido_P }} {{ apellido_M }} </p>
+        <p>GRADO: {{ grado }} {{ grupo }} </p>
+        <p>P R E S E N T E .</p>
+    </div>
+    <!--Descripción-->
+    <div class="descripcion">
+        <p>LA ESCUELA SECUNDARIA TÉCNICA NO.46 "ING. ESTANISLAO RAMÍREZ RUÍZ", TE</p>
+        <p>ENVIA UNA CORDIAL FELICITACIÓN POR HABER OBTENIDO UN PROMEDIO DE {{promedio}}</p>
+        <p>DURANTE EL CICLO ESCOLAR {{ciclo}}, RECIBE NUESTROS PARABIENES Y TE</p>
+        <p>INVITAMOS A QUE CONTINÚES REALIZANDO TU MEJOR ESFUERZO EN CADA </p>              
+        <p>UNA DE TUS ACTIVIDADES ESCOLARES.</p>
+    </div>
+    <!--CLASE ATENTAMENTE-->
+    <div class="atte">
+        <p>ATENTAMENTE </p>
+    </div>  
+
+    <!--IMAGEN FIRMA-->
+    <img class="firmaImg" src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Firmas_cover.png" alt="Firma">
+           
+     <!--FIRMA-->
+    <div class="firma">
+        <p>PROFRA. MARTHA SÁNCHEZ LÓPEZ</p>
+        <p>DIRECTORA DEL PLANTEL</p>
+    </div>
+
+     <!--IMAGEN SELLO SEP-->
+    <img class="selloSEP" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYULFMfROumghTm9I_FKskeMYkWjhMWr6kx4XkaaWB74Dq7ONu42oVL1hAFOvALlwarWzJWuqyRS4Nyg7cEuta9QypH3rnu70HgUKK0z8ltLt_ZBgetS1nxHeCs06yUg85pQ8LCEgPcIs/s1600/SELLO.png" alt="Firma">
+       
+</body>
+</html>

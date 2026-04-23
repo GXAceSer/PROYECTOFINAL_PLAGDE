@@ -1,0 +1,21 @@
+# Dependencias para la aplicación Flask
+Flask==3.0.3
+Flask-Session==0.7.0  # Usamos la versión actualizada
+
+# Conexión a la base de datos PostgreSQL
+psycopg2-binary==2.9.10
+
+# Generación de PDFs desde HTML
+weasyprint==65.1
+
+# Generación de PDFs adicional
+fpdf==1.7.2
+
+# Dependencia para sesiones de Flask-Session
+cachelib==0.13.0
+
+# Dependencia para conversión HTML a PDF
+pdfkit==1.0.0  # Añadimos esta línea
+
+# Servidor WSGI es importante para poderlo ocupar en docker
+uWSGI==2.0.27
