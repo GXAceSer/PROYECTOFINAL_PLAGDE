@@ -24,6 +24,7 @@ Facilitar la creación de documentos oficiales cumpliendo con normas del sector 
 
 ### Base de datos
 -PostgreSQL
+*NOTA: La base de datos incluye usuarios de prueba para facilitar el uso inicial del sistema.
 
 ### Infraestructura
 -Nginx
